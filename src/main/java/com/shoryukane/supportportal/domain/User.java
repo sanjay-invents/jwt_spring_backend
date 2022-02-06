@@ -1,4 +1,4 @@
-package com.shoryukane.supportportal.Domain;
+package com.shoryukane.supportportal.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;

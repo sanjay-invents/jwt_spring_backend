@@ -1,3 +1,6 @@
+jwt:
+  secret: bfb935ae3efdf7459e015607449462e23ebe9e7ce082293911b5327ac95a1cb3
+
 server:
   port: 8081
 

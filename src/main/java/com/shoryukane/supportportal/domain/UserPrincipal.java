@@ -1,4 +1,4 @@
-package com.shoryukane.supportportal.Domain;
+package com.shoryukane.supportportal.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
