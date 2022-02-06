@@ -1,7 +1,11 @@
-package com.shoryukane.supportportal.exception.domain;
+package com.shoryukane.supportportal.exception;
 
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.shoryukane.supportportal.domain.HttpResponse;
+import com.shoryukane.supportportal.exception.domain.EmailExistException;
+import com.shoryukane.supportportal.exception.domain.EmailNotFoundException;
+import com.shoryukane.supportportal.exception.domain.UserNotFoundException;
+import com.shoryukane.supportportal.exception.domain.UsernameExistException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.servlet.error.ErrorController;
