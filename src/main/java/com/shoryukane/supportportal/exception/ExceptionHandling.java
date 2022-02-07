@@ -114,7 +114,7 @@ public class ExceptionHandling implements ErrorController {
                         httpStatus.value(),
                         httpStatus,
                         httpStatus.getReasonPhrase().toUpperCase(),
-                        message.toUpperCase()),
+                        message),
                 httpStatus);
     }
 
