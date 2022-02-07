@@ -1,6 +1,5 @@
 package com.shoryukane.supportportal.configuration;
 
-import com.shoryukane.supportportal.constant.SecurityConstant;
 import com.shoryukane.supportportal.filter.JWTAuthorizationFilter;
 import com.shoryukane.supportportal.filter.JwtAccessDeniedHandler;
 import com.shoryukane.supportportal.filter.JwtAuthenticationEntryPoint;
@@ -14,12 +13,11 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static com.shoryukane.supportportal.constant.SecurityConstant.*;
+import static com.shoryukane.supportportal.constant.SecurityConstant.PUBLIC_URLS;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 @Configuration
