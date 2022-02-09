@@ -2,10 +2,7 @@ package com.shoryukane.supportportal.exception;
 
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.shoryukane.supportportal.domain.HttpResponse;
-import com.shoryukane.supportportal.exception.domain.EmailExistException;
-import com.shoryukane.supportportal.exception.domain.EmailNotFoundException;
-import com.shoryukane.supportportal.exception.domain.UserNotFoundException;
-import com.shoryukane.supportportal.exception.domain.UsernameExistException;
+import com.shoryukane.supportportal.exception.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.servlet.error.ErrorController;
@@ -100,6 +97,12 @@ public class ExceptionHandling implements ErrorController {
     public ResponseEntity<HttpResponse> notFoundException(NoResultException exception) {
         LOGGER.error(exception.getMessage());
         return createHttpResponse(NOT_FOUND, exception.getMessage());
+    }
+
+    @ExceptionHandler(NotAnImageFileException.class)
+    public ResponseEntity<HttpResponse> notAnImageFileException(NotAnImageFileException exception) {
+        LOGGER.error(exception.getMessage());
+        return createHttpResponse(BAD_REQUEST, exception.getMessage());
     }
 
     @ExceptionHandler(IOException.class)
